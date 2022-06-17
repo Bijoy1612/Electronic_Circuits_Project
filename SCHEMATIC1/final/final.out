@@ -1,0 +1,195 @@
+
+**** 12/12/19 14:30:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-final"  [ E:\SEMESTER ALL\Semester 5 (FALL 2019)\CSE251\project\final-PSpiceFiles\SCHEMATIC1\final.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "final.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Asus\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 .001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FINAL
+D_D1         0 N00106 D1N4148 
+D_D2         N00120 N00113 D1N4148 
+D_D3         N00106 N00113 D1N4148 
+D_D4         0 N00120 D1N4148 
+C_C1         0 N00113  1000uF  TC=0,0 
+X_U1         N00113 N00371 0 LM7805C
+R_R1         0 N00371  1k TC=0,0 
+V_V1         N00106 N00120 DC 12Vdc AC 1Vac 
+
+**** RESUMING final.cir ****
+.END
+
+**** 12/12/19 14:30:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-final"  [ E:\SEMESTER ALL\Semester 5 (FALL 2019)\CSE251\project\final-PSpiceFiles\SCHEMATIC1\final.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_U1.x1.Dlim    X_U1.x1.Dz      
+          IS    2.682000E-09   10.000000E-15   50.000000E-15 
+           N    1.836                                        
+         ISR    1.565000E-09                                 
+         IKF     .04417                                      
+          BV  100                               7.11         
+         IBV  100.000000E-06                   50.000000E-09 
+          RS     .5664                          3            
+          TT   11.540000E-09                                 
+         CJO    4.000000E-12                                 
+          VJ     .5              .7                          
+           M     .3333                                       
+
+
+**** 12/12/19 14:30:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-final"  [ E:\SEMESTER ALL\Semester 5 (FALL 2019)\CSE251\project\final-PSpiceFiles\SCHEMATIC1\final.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x1.Npn1    
+               NPN             
+       LEVEL    1            
+          IS   10.000000E-15 
+          BF   50            
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 12/12/19 14:30:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-final"  [ E:\SEMESTER ALL\Semester 5 (FALL 2019)\CSE251\project\final-PSpiceFiles\SCHEMATIC1\final.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x1.Sbg1    
+         RON    1            
+        ROFF    1.000000E+06 
+         VON    3.7          
+        VOFF    3            
+
+
+**** 12/12/19 14:30:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-final"  [ E:\SEMESTER ALL\Semester 5 (FALL 2019)\CSE251\project\final-PSpiceFiles\SCHEMATIC1\final.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00106)   11.2770 (N00113)   10.5550 (N00120)    -.7226 (N00371)    4.9968     
+
+(X_U1.x1.4)    6.3005                 (X_U1.x1.5)    6.2904                     
+
+(X_U1.x1.6)    5.6530                 (X_U1.x1.7)    4.9996                     
+
+(X_U1.x1.8)    4.9969                 (X_U1.x1.9)    4.9969                     
+
+(X_U1.x1.55)    4.9996                (X_U1.x1.56)    4.9996                    
+
+(X_U1.x1.100)    7.4000               (X_U1.x1.101)    3.7005                   
+
+(X_U1.x1.102)   10.5550               (X_U1.x1.105)    6.3005                   
+
+(X_U1.x1.106)    6.3005               (X_U1.x1.107)    1.0000                   
+
+(X_U1.x1.108)    9.5547               (X_U1.x1.200) 1665.0000               
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.001E-02
+    X_U1.x1.Vbg  -3.700E+00
+    X_U1.x1.Vgainf  -1.665E+03
+    X_U1.x1.Vl1   3.264E-12
+    X_U1.x1.Vl2   5.311E-12
+
+    TOTAL POWER DISSIPATION   2.77E+06  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/12/19 14:30:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-final"  [ E:\SEMESTER ALL\Semester 5 (FALL 2019)\CSE251\project\final-PSpiceFiles\SCHEMATIC1\final.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+
